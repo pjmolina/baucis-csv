@@ -5,7 +5,8 @@ CSV Formatter plugin for [Baucis](http://kun.io/baucis) Format streams of data a
 
 [![NPM Version](https://img.shields.io/npm/v/baucis-csv.svg?style=flat)](https://www.npmjs.org/package/baucis-csv)
 [![Build Status](https://img.shields.io/travis/pjmolina/baucis-csv.svg?style=flat)](https://travis-ci.org/pjmolina/baucis-csv)  
-  
+[![Coverage Status](https://img.shields.io/coveralls/pjmolina/baucis-csv.svg)](https://coveralls.io/r/pjmolina/baucis-csv) 
+ 
 ## Usage ##
 
 1. Include the plugin: ```var baucisCsv = require('baucis-csv');```

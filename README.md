@@ -3,14 +3,14 @@ baucis-csv
 
 CSV Formatter plugin for [Baucis](http://kun.io/baucis) Format streams of data as CSV.
 
-# Usage #
+## Usage ##
 
 1. Include the plugin: ```var baucisCsv = require('baucis-csv');```
 2. Register the plugin in baucis with: ```baucisCsv.apply(baucis);```
 
-# Test #
+## Test ##
 
-Query a *baucis* resource passing the MIME Header 'Accept: text/csv'
+Query a **baucis** resource passing the MIME Header ```Accept: text/csv```
 For example, using ```curl``` tool from the command line:
 
 ```curl localhost:5000//api/myresource -H "Accept: text/csv"```

@@ -39,8 +39,9 @@ var plugin = module.exports = function () {
 
 	function csvEncode(data) {
 		var text;
-		if (data == null) return '';
-
+		if (data === null) {
+			return '';
+		}
 		if (isObjectId(data)) {
 			return data.toString();
 		} 	
@@ -50,7 +51,7 @@ var plugin = module.exports = function () {
 		     (text.indexOf('.') >= 0) || 
 			 (text.indexOf(' ') >= 0) )  
 		{
-			return '"' + text + '"'
+			return '"' + text + '"';
 		}	
 		return text;
 	}
@@ -109,14 +110,14 @@ var plugin = module.exports = function () {
 	    } 
 	    // If only one document emit it unwrapped, unless always returning an array.
 	    if (!multiple && alwaysArray) { this.emit('data',''); }
-	    if (!multiple) this.emit('data', csvEncodeObject(first._doc, csvHeaders));
+	    if (!multiple)  { this.emit('data', csvEncodeObject(first._doc, csvHeaders)); }
 	    // For greater than one document, emit the closing array.
 	    else { this.emit('data',''); }
 	    if (!multiple && alwaysArray) { this.emit('data',''); }
 	    // Done.  End the stream.
 	    this.emit('end');
 	  });
-	};
+	}
 
   // Add a CSV formatter.
   baucis.setFormatter('text/csv', csvFormatter);
